@@ -1,0 +1,17 @@
+<h1 class="p-3">Restaurants</h1>
+
+<div class="cards d-flex flex-wrap">
+
+<% @restaurants.each do |restaurant| %>
+  <div class="card w-25 m-2">
+    <div class="card-header">
+      <%= restaurant.category %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title h-50 pb-3"><%= restaurant.name %></h5>
+      <%= link_to 'More', restaurant_path(restaurant), class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
+
+</div>
